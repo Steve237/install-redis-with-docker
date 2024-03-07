@@ -25,6 +25,7 @@ services:
 ```
 
 Cela définit deux services : `php` pour votre application Symfony et `redis` pour le serveur Redis. Assurez-vous que le service PHP dépend du service Redis.
+Pour accéder au terminal redis utiliser la commande: docker exec -it redis sh
 
 ### Étape 2 : Configuration de Symfony pour utiliser Predis
 
