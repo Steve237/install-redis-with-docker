@@ -68,7 +68,6 @@ Cela démarrera les conteneurs Docker pour PHP et Redis.
 Ces étapes devraient vous permettre d'installer Redis avec Docker Compose, de l'utiliser avec Predis dans un projet Symfony 5, et de le configurer comme cache par défaut.
 
 ### Étape 5 : Utilisation de predis dans Symfony pour interagir avec redis dans un controller Symfony
-<?php
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Predis\Client;
