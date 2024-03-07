@@ -140,6 +140,8 @@ handler_id: '%env(REDIS_URL)%'
 - `incr($key)` : Incrémente la valeur d'une clé numérique.
 - `decr($key)` : Décrémente la valeur d'une clé numérique.
 - `flushall()` : Supprime toutes les clés de la base de données.
+- KEY * Permet de voir toutes les clés d'une bdd.
+- SELECT + numéro bdd permet de switcher vers une autre bdd;
 
 Ces méthodes couvrent les opérations de base que vous pouvez effectuer avec Predis. Vous pouvez consulter la documentation officielle de Predis pour découvrir d'autres méthodes et fonctionnalités avancées.
        
