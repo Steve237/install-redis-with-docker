@@ -96,11 +96,8 @@ class ExampleController extends AbstractController
 }
 
 ### Etape 6: Utiliser redis pour stocker la session Symfony;
-Dans framework.yaml la session doit être défini comme suit:
+Dans framework.yaml le paramètre handler_id doit être défini comme suit:
 
-session:
-        handler_id: '%env(REDIS_URL)%'
-        cookie_secure: auto
-        cookie_samesite: lax
-        storage_factory_id: session.storage.factory.native
+handler_id: '%env(REDIS_URL)%'
+       
 
