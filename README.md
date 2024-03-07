@@ -18,6 +18,7 @@ services:
     depends_on:
       - redis
   redis:
+    container_name:redis
     image: redis:latest
     ports:
       - 6379:6379
