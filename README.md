@@ -39,7 +39,7 @@ composer require predis/predis
 services:
     Predis\Client:
         arguments:
-            - 'tcp://redis:6379'
+            - '%env(REDIS_URL)%'
 ```
 
 ### Étape 3 : Configuration de Symfony pour utiliser Redis comme cache par défaut
@@ -50,7 +50,7 @@ services:
 framework:
     cache:
         app: cache.adapter.redis
-        default_redis_provider: 'redis://%env(REDIS_HOST)%:%env(REDIS_PORT)%'
+        default_redis_provider: 'redis://redis:6379'
 ```
 
 Assurez-vous d'ajuster `%env(REDIS_HOST)%` et `%env(REDIS_PORT)%` selon votre configuration Docker Compose.
