@@ -101,5 +101,46 @@ class ExampleController extends AbstractController
 Dans framework.yaml le paramètre handler_id doit être défini comme suit:
 
 handler_id: '%env(REDIS_URL)%'
+
+### Commandes predis de base;
+
+### Manipulation des clés et des valeurs :
+
+- `set($key, $value)` : Définit la valeur d'une clé.
+- `get($key)` : Récupère la valeur d'une clé.
+- `del($key)` : Supprime une clé et sa valeur.
+- `exists($key)` : Vérifie si une clé existe.
+- `expire($key, $seconds)` : Définit une expiration (durée de vie) pour une clé en secondes.
+- `ttl($key)` : Récupère le temps en secondes avant que la clé expire.
+
+### Manipulation des listes :
+
+- `lpush($key, $value)` : Ajoute une valeur à la tête d'une liste.
+- `rpush($key, $value)` : Ajoute une valeur à la fin d'une liste.
+- `lpop($key)` : Retire et renvoie la première valeur d'une liste.
+- `rpop($key)` : Retire et renvoie la dernière valeur d'une liste.
+- `llen($key)` : Récupère la longueur d'une liste.
+
+### Manipulation des ensembles :
+
+- `sadd($key, $value)` : Ajoute un élément à un ensemble.
+- `srem($key, $value)` : Supprime un élément d'un ensemble.
+- `smembers($key)` : Récupère tous les membres d'un ensemble.
+- `sismember($key, $value)` : Vérifie si un élément est un membre d'un ensemble.
+
+### Manipulation des hachages (hashes) :
+
+- `hset($key, $field, $value)` : Définit le champ d'un hachage à une valeur.
+- `hget($key, $field)` : Récupère la valeur d'un champ d'un hachage.
+- `hdel($key, $field)` : Supprime un champ d'un hachage.
+- `hgetall($key)` : Récupère tous les champs et valeurs d'un hachage.
+
+### Autres opérations :
+
+- `incr($key)` : Incrémente la valeur d'une clé numérique.
+- `decr($key)` : Décrémente la valeur d'une clé numérique.
+- `flushall()` : Supprime toutes les clés de la base de données.
+
+Ces méthodes couvrent les opérations de base que vous pouvez effectuer avec Predis. Vous pouvez consulter la documentation officielle de Predis pour découvrir d'autres méthodes et fonctionnalités avancées.
        
 
